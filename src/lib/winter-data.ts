@@ -141,7 +141,7 @@ export const itineraryData: ItineraryDay[] = [
         time: "Afternoon",
         description:
           "Arrive in Prague and check in to the Czech Inn in the trendy Vinohrady neighborhood.",
-        location: "Czech Inn",
+        location: "Francouzská 240/76, 101 00 Praha 10-Vršovice, Czechia",
       },
       {
         time: "Evening",
