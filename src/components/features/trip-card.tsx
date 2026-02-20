@@ -12,7 +12,7 @@ interface TripCardProps {
 export function TripCard({ trip }: TripCardProps) {
   return (
     <Link href={`/trips/${trip.slug}`} className="block group">
-      <Card className="overflow-hidden transition-all hover:shadow-md border-0 bg-transparent flex flex-col gap-3">
+      <Card className="overflow-hidden transition-all hover:shadow-md border-0 bg-transparent flex flex-col gap-0">
         {/* Image Container (Airbnb Style - Image on top) */}
         <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-secondary/80">
           {trip.image ? (
@@ -49,7 +49,7 @@ export function TripCard({ trip }: TripCardProps) {
         </div>
 
         {/* Text Content Below Image */}
-        <CardContent className="px-1 py-0 flex flex-col gap-1">
+        <CardContent className="px-4 py-4 flex flex-col">
           <h3 className="text-base font-semibold text-foreground tracking-tight line-clamp-1">
             {trip.destination}
           </h3>
