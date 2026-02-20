@@ -49,7 +49,7 @@ export function TripCard({ trip }: TripCardProps) {
         </div>
 
         {/* Text Content Below Image */}
-        <CardContent className="p-0 flex flex-col gap-1">
+        <CardContent className="px-1 py-0 flex flex-col gap-1">
           <h3 className="text-base font-semibold text-foreground tracking-tight line-clamp-1">
             {trip.destination}
           </h3>
