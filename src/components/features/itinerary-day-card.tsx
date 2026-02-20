@@ -36,16 +36,16 @@ export function ItineraryDayCard({ day }: ItineraryDayCardProps) {
 
       <AccordionContent className="pb-6 pt-2">
         <div className="flex flex-col gap-6">
-          <div className="space-y-6 relative before:absolute before:inset-0 before:ml-2.5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-border/10 before:via-border/50 before:to-border/10">
+          <div className="space-y-6 relative md:before:absolute md:before:inset-0 md:before:mx-auto md:before:translate-x-0 md:before:h-full md:before:w-0.5 md:before:bg-gradient-to-b md:before:from-border/10 md:before:via-border/50 md:before:to-border/10">
             {day.activities.map((activity, index) => (
               <div
                 key={index}
                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group select-none"
               >
                 {/* Timeline Dot */}
-                <div className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-background bg-primary absolute left-0 md:left-1/2 -translate-x-1/2 md:translate-x-[-50%] shrink-0 shadow"></div>
+                <div className="hidden md:flex items-center justify-center w-6 h-6 rounded-full border-2 border-background bg-primary absolute md:left-1/2 md:-translate-x-1/2 shrink-0 shadow"></div>
 
-                <div className="w-[calc(100%-2.5rem)] md:w-[calc(50%-2.5rem)] p-4 rounded-xl border bg-background/50 backdrop-blur-sm shadow-sm transition-colors hover:bg-secondary/40 ml-10 md:ml-0">
+                <div className="w-full md:w-[calc(50%-2.5rem)] p-4 rounded-xl border bg-background/50 backdrop-blur-sm shadow-sm transition-colors hover:bg-secondary/40">
                   <div className="flex items-center gap-2 mb-2">
                     <Clock className="w-4 h-4 text-primary" />
                     <span className="text-sm font-semibold tracking-tight">
