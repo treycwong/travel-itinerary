@@ -97,7 +97,7 @@ export const itineraryData: ItineraryDay[] = [
         time: "All Day",
         description:
           "Hallstatt Guided Bus Tour. Scenic drive through the Salzkammergut lake district, funicular ride up to the Skywalk for panoramic mountain views, and exploring the 16th-century Alpine houses.",
-        url: "https://www.klook.com/en-US/activity/3745-hallstatt-alpine-village-tour-salzburg/",
+        url: "https://www.klook.com/en-MY/activity/20876-hallstatt-day-tour-vienna/?spm=HotelAPI_HotelListing.SearchSuggest_LIST&clickId=a378bca799",
       },
     ],
   },
@@ -187,7 +187,7 @@ export const itineraryData: ItineraryDay[] = [
         time: "All Day",
         description:
           "Český Krumlov Guided Bus Tour. Explore this stunningly preserved, fairy-tale medieval town built around a dramatic horseshoe bend in the Vltava River.",
-        url: "https://www.klook.com/en-US/activity/3746-cesky-krumlov-day-trip-prague/",
+        url: "https://www.klook.com/en-US/activity/108938-prague-to-cesky-krumlov-one-day-trip/?spm=Activity.SearchSuggest_LIST&clickId=52a8e82ec2",
       },
       {
         time: "Dinner",
