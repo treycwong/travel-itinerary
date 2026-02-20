@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travel Itinerary
+
+A production-ready Next.js application scaffolded with a cohesive design system, TailwindCSS v4, and Shadcn UI.
+
+---
+
+## Tech Stack
+
+| Layer      | Technology                                                          |
+| ---------- | ------------------------------------------------------------------- |
+| Framework  | [Next.js 16](https://nextjs.org/) (App Router)                      |
+| Language   | TypeScript                                                          |
+| Styling    | [TailwindCSS v4](https://tailwindcss.com/)                          |
+| UI Library | [Shadcn UI](https://ui.shadcn.com/) (New York style, CSS variables) |
+| Font       | [Geist](https://vercel.com/font) (sans + mono)                      |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- **Node.js** ≥ 18
+- **npm** ≥ 9
+
+### Setup
 
 ```bash
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── layout.tsx        # Root layout, font loading, metadata
+│   ├── page.tsx          # Landing page
+│   └── globals.css       # Design tokens (CSS custom properties)
+├── components/
+│   ├── ui/               # Shadcn primitives (auto-generated)
+│   └── features/         # Composed, domain-specific components
+└── lib/
+    └── utils.ts          # Shared utilities (cn, helpers)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Directory              | Purpose                                       | Who writes it           |
+| ---------------------- | --------------------------------------------- | ----------------------- |
+| `components/ui/`       | Shadcn primitives                             | `npx shadcn add <name>` |
+| `components/features/` | Feature components that compose UI primitives | Developer               |
+| `lib/`                 | Utility functions                             | Developer               |
 
-## Deploy on Vercel
+### Adding a Shadcn Component
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npx shadcn add button
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This places the component in `src/components/ui/button.tsx`. To customize it for a feature, create a wrapper in `src/components/features/`.
+
+---
+
+## Design System
+
+👉 **[design-system.md](./design-system.md)** — the complete UI contract covering:
+
+- Color palette & token reference
+- Typography scale
+- Spacing & radius conventions
+- Rules for extending Shadcn components
+
+**All contributors (human or AI) must follow this document when adding UI.**
+
+---
+
+## Scripts
+
+| Command         | Description                  |
+| --------------- | ---------------------------- |
+| `npm run dev`   | Start dev server (Turbopack) |
+| `npm run build` | Production build             |
+| `npm start`     | Serve production build       |
+| `npm run lint`  | Run ESLint                   |
+
+---
+
+## License
+
+Private — all rights reserved.
